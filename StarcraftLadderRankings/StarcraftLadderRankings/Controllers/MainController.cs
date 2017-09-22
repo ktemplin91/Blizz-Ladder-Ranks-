@@ -13,5 +13,10 @@ namespace StarcraftLadderRankings.Controllers
         {
             return View();
         }
+
+        public ViewResult StarcraftRemastered()
+        {
+            return View();
+        }
     }
 }
