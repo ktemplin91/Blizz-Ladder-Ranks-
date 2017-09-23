@@ -18,5 +18,31 @@ namespace StarcraftLadderRankings.Controllers
         {
             return View();
         }
+
+        public ViewResult StarcraftII()
+        {
+            return View();
+        }
+
+        public ViewResult WoW()
+        {
+            return View();
+        }
+
+        public ViewResult DiabloIII()
+        {
+            return View();
+        }
+
+        public ViewResult HeroesOfTheStorm()
+        {
+            return View();
+        }
+
+        public ViewResult Overwatch()
+        {
+            return View();
+        }
+
     }
 }

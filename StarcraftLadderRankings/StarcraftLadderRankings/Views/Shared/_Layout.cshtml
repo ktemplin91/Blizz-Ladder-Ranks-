@@ -10,6 +10,10 @@
         body {
             background-color: black;
         }
+        .my-2 {
+            margin-top: .5rem !important;
+            margin-bottom: .5rem !important;
+        }
     </style>
 </head>
 <body>
@@ -21,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Blizzard Stats", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Blizzard Stats", "Index", "Main", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -30,6 +34,10 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+                <div class="pull-right my-2">
+                    @Html.ActionLink("Sign in with Battle.net", "StarcraftRemastered", "Main", null, new { @class = "btn btn-primary btn-large" })
+                    @Html.ActionLink("Battle.net", null,null,new{ @class = "btn btn-primary btn-large" , Href= "http://us.battle.net/en" })
+                </div>
             </div>
         </div>
     </div>

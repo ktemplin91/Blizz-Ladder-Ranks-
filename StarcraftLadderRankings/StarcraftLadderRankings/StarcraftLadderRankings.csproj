@@ -188,6 +188,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\StarcraftRemastered.cshtml" />
+    <Content Include="Views\Main\StarcraftII.cshtml" />
+    <Content Include="Views\Main\WoW.cshtml" />
+    <Content Include="Views\Main\DiabloIII.cshtml" />
+    <Content Include="Views\Main\HeroesOfTheStorm.cshtml" />
+    <Content Include="Views\Main\Overwatch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

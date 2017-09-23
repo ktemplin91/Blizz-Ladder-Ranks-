@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "WoW";
+}
+
+<style>
+    body {
+        background-color: black;
+        font-size: 14px;
+    }
+
+    .jumbotron {
+        border-radius: 0;
+        background-position: left center;
+        margin-bottom: 0;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    .align-middle {
+        vertical-align: middle !important;
+    }
+
+    .d-table-cell {
+        display: table-cell !important;
+    }
+
+    .welcome {
+        background-color: black;
+        background: none;
+        color: white;
+        background-image: url('http://media.blizzard.com/wow/media/wallpapers/other/story-of-wow-orcsvhumans/story-of-wow-orcsvhumans-1920x1200.jpg');
+        width: 100%;
+        height: calc(100vh - 184px);
+        # height: auto;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+</style>
+
+<div class="row">
+
+    <div class="maincontents">
+        <div class="jumbotron d-table welcome">
+            <div class="table-cell align-middle text-center">
+                <h1 class="display-4">Hello!</h1>
+                <p>Stats on Stats on Stats</p>
+                <a class="btn btn-success btn-lg mr-2" href="profile">My Stats</a>
+                <a class="btn btn-primary btn-lg" href="leaderboard">LeaderBoard</a>
+            </div>
+        </div>
+    </div>
+</div>
+
