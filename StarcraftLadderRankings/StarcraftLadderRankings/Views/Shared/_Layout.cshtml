@@ -10,6 +10,7 @@
         body {
             background-color: black;
         }
+
         .my-2 {
             margin-top: .5rem !important;
             margin-bottom: .5rem !important;
@@ -35,14 +36,36 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 <div class="pull-right my-2">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#myModal">Sign In / Sign Up</button>
                     @Html.ActionLink("Sign in with Battle.net", "StarcraftRemastered", "Main", null, new { @class = "btn btn-primary btn-large" })
-                    @Html.ActionLink("Battle.net", null,null,new{ @class = "btn btn-primary btn-large" , Href= "http://us.battle.net/en" })
+                    @Html.ActionLink("Battle.net", null, null, new { @class = "btn btn-primary btn-large", Href = "http://us.battle.net/en" })
                 </div>
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
+
+        <!--MODAL LOGIN-->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body" id="LoginView">
+                        @Html.Partial("Login")
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF MODAL LOGIN-->
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>

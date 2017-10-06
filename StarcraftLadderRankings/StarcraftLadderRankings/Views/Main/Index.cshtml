@@ -2,8 +2,11 @@
     ViewBag.Title = "Home Page";
 }
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style>
-    .Starcraft, .SCII, .D3, .WoW, .HotS,.Overwatch{
+    .Starcraft, .SCII, .D3, .WoW, .HotS, .Overwatch{
         width: 50px;
         height: 50px;
     }
@@ -17,63 +20,61 @@
     }
 </style>
 
-<div class="row" id="features">
-    <div class="col-lg-12">
-        <div class="row align-items-center text-center">
-            <div class="col-md-4 feature ">
-                <img class="Starcraft" src="https://dl2.macupdate.com/images/icons256/3851.png?d=1362430390"></img>
-                <h3>Starcraft:Remastered</h3>
-                <div class="title_border"></div>
-                <p>Starcraft Broodwar Remastered</p>
-                @Html.ActionLink("Enter", "StarcraftRemastered", "Main", null, new { @class = "btn btn-primary btn-large" })
+    <div class="row" id="features">
+        <div class="col-lg-12">
+            <div class="row align-items-center text-center">
+                <div class="col-md-4 feature ">
+                    <img class="Starcraft" src="https://dl2.macupdate.com/images/icons256/3851.png?d=1362430390"></img>
+                    <h3>Starcraft:Remastered</h3>
+                    <div class="title_border"></div>
+                    <p>Starcraft Broodwar Remastered</p>
+                    @Html.ActionLink("Enter", "StarcraftRemastered", "Main", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+                <div class="col-md-4 feature">
+                    <img class="SCII" src="http://i.imgur.com/j0HKo9g.png"></img>
+                    <h3>Starcraft II</h3>
+                    <div class="title_border"></div>
+                    <p>Starcraft II Legacy of the Void</p>
+                    @Html.ActionLink("Enter", "StarcraftII", "Main", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+                <div class="col-md-4 feature">
+                    <img class="WoW" src="https://orig00.deviantart.net/65e3/f/2014/207/e/2/official_wow_icon_by_benashvili-d7sd1ab.png"></img>
+                    <h3>World of Warcraft</h3>
+                    <div class="title_border"></div>
+                    <p>World of Warcraft: Legion </p>
+                    @Html.ActionLink("Enter", "WoW", "Main", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+                <div class="col-md-4 feature">
+                    <img class="D3" src="http://mpcgaming.com/img/d3icon.png"></img>
+                    <h3>Diablo III</h3>
+                    <div class="title_border"></div>
+                    <p>Diablo III</p>
+                    @Html.ActionLink("Enter", "DiabloIII", "Main", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+                <div class="col-md-4 feature">
+                    <img class="HotS" src="https://jabarri1.github.io/WoW_Armory_Bot/img/heroes_icon.png"></img>
+                    <h3>Heroes of the Storm</h3>
+                    <div class="title_border"></div>
+                    <p>Heroes of the Storm</p>
+                    @Html.ActionLink("Enter", "HeroesOfTheStorm", "Main", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+                <div class="col-md-4 feature">
+                    <img class="Overwatch" src="https://www.flaktest.com/wp-content/uploads/2017/01/owlogo.jpg"></img>
+                    <h3>Overwatch</h3>
+                    <div class="title_border"></div>
+                    <p>Overwatch</p>
+                    @Html.ActionLink("Enter", "Overwatch", "Main", null, new { @class = "btn btn-primary btn-large" })
+                </div>
+
             </div>
-            <div class="col-md-4 feature">
-                <img class="SCII" src="http://i.imgur.com/j0HKo9g.png"></img>
-                <h3>Starcraft II</h3>
-                <div class="title_border"></div>
-                <p>Starcraft II Legacy of the Void</p>
-                @Html.ActionLink("Enter", "StarcraftII", "Main", null, new { @class = "btn btn-primary btn-large" })
-            </div>
-            <div class="col-md-4 feature">
-                <img class="WoW" src="https://orig00.deviantart.net/65e3/f/2014/207/e/2/official_wow_icon_by_benashvili-d7sd1ab.png"></img>
-                <h3>World of Warcraft</h3>
-                <div class="title_border"></div>
-                <p>World of Warcraft: Legion </p>
-                @Html.ActionLink("Enter", "WoW", "Main", null, new { @class = "btn btn-primary btn-large" })
-            </div>
-            <div class="col-md-4 feature">
-                <img class="D3" src="http://mpcgaming.com/img/d3icon.png"></img>
-                <h3>Diablo III</h3>
-                <div class="title_border"></div>
-                <p>Diablo III</p>
-                @Html.ActionLink("Enter", "DiabloIII", "Main", null, new { @class = "btn btn-primary btn-large" })
-            </div>
-            <div class="col-md-4 feature">
-                <img class="HotS" src="https://jabarri1.github.io/WoW_Armory_Bot/img/heroes_icon.png"></img>
-                <h3>Heroes of the Storm</h3>
-                <div class="title_border"></div>
-                <p>Heroes of the Storm</p>
-                @Html.ActionLink("Enter", "HeroesOfTheStorm", "Main", null, new { @class = "btn btn-primary btn-large" })
-            </div>
-            <div class="col-md-4 feature">
-                <img class="Overwatch" src="https://www.flaktest.com/wp-content/uploads/2017/01/owlogo.jpg"></img>
-                <h3>Overwatch</h3>
-                <div class="title_border"></div>
-                <p>Overwatch</p>
-                @Html.ActionLink("Enter", "Overwatch", "Main", null, new { @class = "btn btn-primary btn-large" })
-            </div>
-          
         </div>
     </div>
-</div>
-<br />
-<div class="row">
-    <div class="well well-lg">
-        <div class="text-center">
-            <h3 class="text-capitalize">Find all you Blizzard Stats in One Place!</h3>
-            <p>All Stats All The Time</p>
+    <br />
+    <div class="row">
+        <div class="well well-lg">
+            <div class="text-center">
+                <h3 class="text-capitalize">Find all your Blizzard Stats in One Place!</h3>
+                <p>All Stats All The Time</p>
+            </div>
+        </div>
     </div>
-</div>
-
-
-   
