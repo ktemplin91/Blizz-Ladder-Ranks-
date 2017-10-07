@@ -49,5 +49,10 @@ namespace StarcraftLadderRankings.Controllers
             return PartialView();
         }
 
+        public PartialViewResult SignUp()
+        {
+            return PartialView();
+        }
+
     }
 }

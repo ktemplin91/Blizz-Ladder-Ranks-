@@ -15,6 +15,12 @@
             margin-top: .5rem !important;
             margin-bottom: .5rem !important;
         }
+
+         .menutest {
+            border-left: 3px solid grey;
+            height: auto;
+        }
+    </style>
     </style>
 </head>
 <body>
@@ -38,6 +44,7 @@
                 <div class="pull-right my-2">
                     <!-- Trigger the modal with a button -->
                     <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#myModal">Sign In / Sign Up</button>
+                    <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#mySignUp">Sign Up</button>
                     @Html.ActionLink("Sign in with Battle.net", "StarcraftRemastered", "Main", null, new { @class = "btn btn-primary btn-large" })
                     @Html.ActionLink("Battle.net", null, null, new { @class = "btn btn-primary btn-large", Href = "http://us.battle.net/en" })
                 </div>
@@ -49,12 +56,12 @@
 
         <!--MODAL LOGIN-->
         <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-xl">
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
+                        <h2 class="modal-title text-center">Account Sign Up / Account Login</h2>
                     </div>
                     <div class="modal-body" id="LoginView">
                         @Html.Partial("Login")
@@ -66,11 +73,31 @@
             </div>
         </div>
         <!--END OF MODAL LOGIN-->
+        <!--MODAL SignUp-->
+        <div class="modal fade" id="mySignUp" role="dialog">
+            <div class="modal-dialog modal-xl">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title text-center">Account Sign Up</h2>
+                    </div>
+                    <div class="modal-body" id="SignUpView">
+                        @Html.Partial("SignUp")
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END OF MODAL SignUp-->
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
